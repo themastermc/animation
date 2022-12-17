@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Chivo Mono', monospace;
+}
+
+body{
+    background-color: #1a1a1a;
+}
+
+.container .menu{
+    background-color: #111111;
+    display: grid;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container .menu .title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 10px 10px 10px 40px;
+}
+
+.container .menu .link{
+    font-size: 20px;
+
+}
+
+.container .menu .link .button{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    border: 2px #1a1a1a solid;
+    transition: all ease 400ms;
+    font-weight: bold;
+}
+
+.container .menu .link .button::before{
+    background-color: #1a1a1a;
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 8px;
+    border-radius: 2px;
+    border: #680000 2px solid;
+    left: 5%;
+    top: -5px;
+    transition: all 300ms ease;
+}
+
+.container .menu .link .button:hover::before{
+    position: absolute;
+    content: "";
+    width: 12px;
+    left: 85%;
+    top: -5px;
+}
+
+.container .menu .link .button::after{
+    background-color: #1a1a1a;
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 8px;
+    border-radius: 2px;
+    border: #680000 2px solid;
+    left: 85%;
+    bottom: -5px;
+    transition: all 400ms ease;
+}
+
+.container .menu .link .button:hover::after{
+    position: absolute;
+    content: "";
+    width: 12px;
+    left: 5%;
+    bottom: -5px;
+}
+
+
+.container .menu .link .button:hover{
+    border-color: #680000;
+    box-shadow: 0px 0px 8px 2px #680000;
+    color: #680000;
+}
+
+.cuerpo{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-spinner2{
+    font-size: 50px;
+    color: white;
+    cursor: default;
+    animation: anim 1.6s ease-in forwards infinite;
+}
+
+
+@keyframes anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    10%{    
+        transform: rotate(36deg);
+    }
+
+    20%{
+        transform: rotate(72deg);
+    }
+    30%{
+        transform: rotate(108deg);
+    }
+    40%{
+        transform: rotate(144deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+
+    60%{
+        transform: rotate(216deg);
+    }
+
+    70%{
+        transform: rotate(252deg);
+    }
+
+    80%{
+        transform: rotate(298deg);
+    }
+
+    90%{
+        transform: rotate(324deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
